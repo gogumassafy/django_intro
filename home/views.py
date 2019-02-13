@@ -17,3 +17,9 @@ def dinner(request):
     menus = ['치킨', '짜장면', '등심', '갈비살']
     pick = random.choice(menus)
     return render(request, 'dinner.html', {'menus': menus, 'pick': pick})
+    
+def hello(request, name):
+    return render(request, 'hello.html', {'name': name})
+    
+def cube(request, number):
+    return render(request, 'cube.html', {'number':number**3})
