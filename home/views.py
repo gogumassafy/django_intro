@@ -18,29 +18,29 @@ def index(request):
 def dinner(request):
     menus = ['치킨', '짜장면', '등심', '갈비살']
     pick = random.choice(menus)
-    return render(request, 'dinner.html', {'menus': menus, 'pick': pick})
+    return render(request, 'home/dinner.html', {'menus': menus, 'pick': pick})
     
 def hello(request, name):
-    return render(request, 'hello.html', {'name': name})
+    return render(request, 'home/hello.html', {'name': name})
     
 def cube(request, number):
-    return render(request, 'cube.html', {'number':number**3})
+    return render(request, 'home/cube.html', {'number':number**3})
     
 def ping(request):
-    return render(request, 'ping.html')
+    return render(request, 'home/ping.html')
 
 def pong(request):
     print(request.GET)
     data = request.GET.get('data')
-    return render(request, 'pong.html', {'data': data})
+    return render(request, 'home/pong.html', {'data': data})
     
 def user_new(request):
-    return render(request, 'user_new.html')
+    return render(request, 'home/user_new.html')
     
 def user_create(request):
     nickname = request.POST.get('nickname')
     pwd = request.POST.get('pwd')
-    return render(request, 'user_create.html', {'nickname': nickname, 'pwd':pwd})
+    return render(request, 'home/user_create.html', {'nickname': nickname, 'pwd':pwd})
     
 def template_example(request):
     my_list = ['짜장면', '탕수육', '짬뽕', '양장피']
@@ -48,7 +48,7 @@ def template_example(request):
     messages = ['apple', 'banana', 'cucumber', 'mango']
     empty_list = []
     datetimenow = datetime.now()
-    return render(request, 'template_example.html', {'my_list': my_list, 'my_sentence': my_sentence, 'messages': messages, 'empty_list': empty_list, 'datetimenow': datetimenow})
+    return render(request, 'home/template_example.html', {'my_list': my_list, 'my_sentence': my_sentence, 'messages': messages, 'empty_list': empty_list, 'datetimenow': datetimenow})
     
 
 
