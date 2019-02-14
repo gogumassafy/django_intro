@@ -9,7 +9,7 @@ def index(request):
     # print(type(request))
     # pprint(request.META)
     # return HttpResponse('Welcoome to Django !')
-    return render(request, 'index.html')
+    return render(request, 'home/index.html')
     
 # def dinner(request):
 #     dinner = ['치킨', '짜장면', '등심', '갈비살']
@@ -53,4 +53,4 @@ def template_example(request):
 
 
 def static_example(request):
-    return render(request, 'static_example.html')
+    return render(request, 'home/static_example.html')

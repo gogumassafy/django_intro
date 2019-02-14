@@ -11,6 +11,6 @@ urlpatterns = [
     path('ping/', views.ping, name='ping'),
     path('cube/<int:number>/', views.cube, name='cuve'),
     path('hello/<name>/', views.hello, name='hello'),
-    path('dinner/', views.dinner, name='index'),
+    path('dinner/', views.dinner, name='dinner'),
     path('index/', views.index, name='index'),
     ]
